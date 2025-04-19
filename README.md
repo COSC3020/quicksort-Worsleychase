@@ -23,11 +23,11 @@ $$ T(n) = T(n-1) + O(n)$$
 
 Expand to get:
 
-$T(n) = n + (n-1) + (n-2)+... + 1$
+$T(n) = (n−1) + (n−2) + T(n−2)$
 
 We can see the pattern forming, yielding a simpler equation:
 
-$T(n) = \frac{n(n+1)}{2} = \frac{n^2+n}{2}$
+$T(n) = \frac{(n-1)(n-2)}{2} \approx \frac{n^2-n}{2}$
 
 The fastest growing term here is $n^2$, therefore our worst case runtime complexity is:
 
